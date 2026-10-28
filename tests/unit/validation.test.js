@@ -19,4 +19,16 @@ describe('Validação de tarefas', () => {
     test('normalizeTitle deve retornar uma string vazia se o título for indefinido', () => {
         expect(normalizeTitle(undefined)).toBe('');
     });
+    //caso de teste para entrada vazia
+    test('caso 1: Deve mostrar erro quando o título da tarefa estiver vazio', () => {
+        // Entrada especificada na tabela
+    const entrada = ""; 
+    
+    // Função hipotética que valida a tarefa (substitua pela sua função real)
+    const resultado = validateTaskInput(entrada);
+    
+    // Saída esperada baseada na tabela
+    expect (resultado).toBe("O titulo da tarefa em obrigatoria");
+  });
+    
 });
